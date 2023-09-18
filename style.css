@@ -1,0 +1,178 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+  font-size: 100%;
+}
+
+body {
+  font-family: "poppins", sans-serif;
+  overflow-x: hidden;
+}
+
+/* Hero Section */
+
+.hero {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.hero::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url("./images/HeroBG.jpg");
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  /* opacity: 0.9; */
+  filter: brightness(60%);
+}
+
+.hero_content {
+  position: relative;
+}
+
+.hero_content h1 {
+  color: white;
+  text-shadow: 4px 4px 5px gray;
+  font-size: 4rem;
+}
+
+.hero_content h2 {
+  color: #191717;
+  margin-top: 1rem;
+  margin-bottom: 4rem;
+}
+
+.hero_content a {
+  padding: 5px 30px;
+  border: 2px solid white;
+  border-radius: 30px;
+  background-color: transparent;
+  text-decoration: none;
+  color: white;
+  font-size: 1.5rem;
+}
+
+.hero_content a:hover {
+  background-color: #191717;
+  transition: background-color 0.45s ease-in-out;
+}
+
+/* Header Section */
+
+.header {
+  position: fixed;
+  top: 0;
+  width: 100vw;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.5);
+  height: 70px;
+}
+
+.logo p {
+  color: white;
+  font-size: 2rem;
+}
+
+.logo a {
+  text-decoration: none;
+}
+
+.logo span {
+  color: red;
+}
+
+.menu ul {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.menu li {
+  list-style: none;
+  margin: 0px 20px;
+  text-transform: uppercase;
+  border-bottom: 2px solid transparent;
+}
+
+.menu li:hover {
+  border-bottom: 2px solid red;
+  transition: border-bottom 0.2s ease-in-out;
+}
+
+.menu a {
+  color: white;
+  text-decoration: none;
+}
+
+.order a {
+  text-decoration: none;
+  padding: 5px 20px;
+  background-color: red;
+  color: white;
+  font-weight: 600;
+  border-radius: 30px;
+}
+
+/* .order a:hover {
+  border-bottom: 2px solid red;
+} */
+
+.order a:hover {
+  background-color: #191717;
+}
+
+/* Mobile Menu */
+
+#mobile_menu {
+  display: none;
+  height: 40px;
+  line-height: 40px;
+  background-color: red;
+}
+
+#mobile_menu ul {
+  display: flex;
+  justify-content: center;
+}
+
+#mobile_menu ul li {
+  list-style: none;
+  padding: 0px 5px;
+}
+
+#mobile_menu ul li a {
+  text-decoration: none;
+  color: white;
+}
+
+@media screen and (max-width: 768px) {
+  #mobile_menu {
+    display: block;
+  }
+  .navbar ul {
+    display: none;
+  }
+  .hero_content h2 {
+    color: white;
+  }
+}
